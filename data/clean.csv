@@ -1,0 +1,16 @@
+tanggal,jam,datetime,coordinates,lintang,bujur,magnitude,kedalaman,wilayah,potensi
+12 okt 2026,04:34:53 wib,2026-10-11 21:34:53+00:00,"0.64,121.75",0.64 lu,121.75 bt,5.7,76 km,29 km baratlaut pohuwato-gorontalo,tidak berpotensi tsunami
+11 okt 2026,10:30:20 wib,2026-10-11 03:30:20+00:00,"-8.73,106.47",8.73 ls,106.47 bt,5.7,10 km,193 km baratdaya kab-sukabumi-jabar,tidak berpotensi tsunami
+09 okt 2026,12:11:04 wib,2026-10-09 05:11:04+00:00,"0.77,126.03",0.77 lu,126.03 bt,5.1,10 km,125 km tenggara bitung-sulut,tidak berpotensi tsunami
+08 okt 2026,15:07:56 wib,2026-10-08 08:07:56+00:00,"5.66,125.19",5.66 lu,125.19 bt,5.8,10 km,230 km baratlaut tahuna-kep.sangihe-sulut,tidak berpotensi tsunami
+07 okt 2026,03:15:26 wib,2026-10-06 20:15:26+00:00,"-8.77,116.14",8.77 ls,116.14 bt,5.2,92 km,9 km tenggara lombokbarat-ntb,tidak berpotensi tsunami
+06 okt 2026,20:11:23 wib,2026-10-06 13:11:23+00:00,"4.94,118.77",4.94 lu,118.77 bt,5.3,10 km,219 km timurlaut tarakan-kaltara,tidak berpotensi tsunami
+04 okt 2026,06:37:31 wib,2026-10-03 23:37:31+00:00,"4.56,94.97",4.56 lu,94.97 bt,5.9,26 km,68 km baratdaya calang-acehjaya,tidak berpotensi tsunami
+04 okt 2026,05:55:52 wib,2026-10-03 22:55:52+00:00,"-9.70,118.92",9.70 ls,118.92 bt,6.1,10 km,14 km baratdaya kodi-sumbabaratdaya-ntt,tidak berpotensi tsunami
+01 okt 2026,21:20:00 wib,2026-10-01 14:20:00+00:00,"-7.07,120.80",7.07 ls,120.80 bt,5.1,10 km,111 km tenggara selayar-sulsel,tidak berpotensi tsunami
+22 sep 2026,06:48:13 wib,2026-09-21 23:48:13+00:00,"4.74,125.30",4.74 lu,125.30 bt,5.2,10 km,127 km baratlaut tahuna-kep.sangihe-sulut,tidak berpotensi tsunami
+21 sep 2026,14:31:07 wib,2026-09-21 07:31:07+00:00,"-0.70,122.45",0.70 ls,122.45 bt,5.3,10 km,26 km baratdaya pulaupuah-sulteng,tidak berpotensi tsunami
+21 sep 2026,08:41:37 wib,2026-09-21 01:41:37+00:00,"-8.33,120.59",8.33 ls,120.59 bt,5.3,10 km,34 km timurlaut ruteng-manggarai-ntt,tidak berpotensi tsunami
+19 sep 2026,11:18:36 wib,2026-09-19 04:18:36+00:00,"-1.60,138.88",1.60 ls,138.88 bt,5.1,10 km,33 km timurlaut sarmi-papua,tidak berpotensi tsunami
+18 sep 2026,21:36:17 wib,2026-09-18 14:36:17+00:00,"-8.64,105.74",8.64 ls,105.74 bt,5.2,10 km,198 km baratdaya bayah-banten,tidak berpotensi tsunami
+17 sep 2026,13:20:53 wib,2026-09-17 06:20:53+00:00,"1.35,126.44",1.35 lu,126.44 bt,5.1,24 km,118 km baratlaut jailolo-malut,tidak berpotensi tsunami
