@@ -77,7 +77,7 @@ python D:/gempa_stg/src/notify.py
 3. Copy DAG ke `C:\Users\USER\airflow_docker\dags\gempa_dag.py`
 4. Buka `http://localhost:8080` (login: `airflow` / `airflow`), unpause DAG `gempa_indo`
 
-Jadwal: `*/5 * * * *` (tiap 5 menit), `catchup=False`.
+Jadwal: `*/1 * * * *` (tiap 1 menit), `catchup=False`.
 
 ## Catatan Desain
 
