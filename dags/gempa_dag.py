@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 
-SRC = "/airflow/gempa_stg/src"
+SRC = "/airflow/pipeline_gempa/src"
 
 default_args = {
     "owner": "ris",
@@ -11,9 +11,9 @@ default_args = {
 }
 
 with DAG(
-    dag_id="gempa_indo",
+    dag_id="gempa_idn",
     default_args=default_args,
-    schedule="*/5 * * * *",
+    schedule="*/1 * * * *",
     start_date=datetime(2026, 10, 8),
     catchup=False,
     tags=["bmkg"],

@@ -20,13 +20,13 @@ extract → raw.json → transform → clean.csv → load → PostgreSQL → not
 
 - Python (`requests`, `pandas`, `psycopg2`, `python-dotenv`)
 - PostgreSQL
-- Apache Airflow (Docker) — orkestrasi tiap 5 menit
+- Apache Airflow (Docker) — orkestrasi tiap 1 menit
 - Telegram Bot API — notifikasi
 
 ## Struktur Folder
 
 ```text
-gempa_stg/
+pipline_gempa/
 ├── src/
 │   ├── extract.py
 │   ├── transform.py
@@ -46,10 +46,7 @@ gempa_stg/
 ## Konfigurasi (`.env`)
 
 ```ini
-DB_NAME=db_gempa
-DB_USER=postgres
 DB_PASSWORD=***
-GEMPA_DB_HOST=localhost
 TELEGRAM_TOKEN=***
 TELEGRAM_CHAT_ID=***
 ```
@@ -72,13 +69,13 @@ python D:/gempa_stg/src/notify.py
 ### Otomatis (Airflow + Docker)
 
 1. Edit `docker-compose.yaml` di folder `airflow_docker`:
-   - Tambah volume mount: `- D:/gempa_stg:/opt/airflow/gempa_stg`
+   - Tambah volume mount: `- D:/pipline_gempa:/opt/airflow/pipline_gempa`
    - Di `x-airflow-common` → `environment`:
      - `_PIP_ADDITIONAL_REQUIREMENTS: "pandas requests psycopg2-binary python-dotenv"`
      - `GEMPA_DB_HOST: host.docker.internal`
-2. `docker compose up -d` (bukan `restart` — restart tidak membaca ulang yaml)
-3. Copy DAG ke `C:\Users\USER\airflow_docker\dags\gempa_sulteng_dag.py`
-4. Buka `http://localhost:8080` (login: `airflow` / `airflow`), unpause DAG `gempa_sulteng`
+2. `wsl - docker compose up -d` (bukan `restart` — restart tidak membaca ulang yaml)
+3. Copy DAG ke `C:\Users\USER\airflow_docker\dags\gempa_dag.py`
+4. Buka `http://localhost:8080` (login: `airflow` / `airflow`), unpause DAG `gempa_indo`
 
 Jadwal: `*/5 * * * *` (tiap 5 menit), `catchup=False`.
 
@@ -108,6 +105,5 @@ Jadwal: `*/5 * * * *` (tiap 5 menit), `catchup=False`.
 | Task "No Status" terus | Scheduler/worker belum healthy | Tunggu `(healthy)` di `docker compose ps` |
 | Scheduler restart berulang | Env `DB_HOST` bentrok dengan internal Airflow | Ganti jadi `GEMPA_DB_HOST` |
 | `docker compose restart` tidak mempan | `restart` tidak baca ulang yaml | Pakai `docker compose up -d` |
-| YAML error `could not find expected ':'` | Titik dua tanpa spasi | Tulis `key: value` (wajib ada spasi) |
 | `FileNotFoundError: data/notif.json` di container | Path relatif, tergantung folder kerja | Pakai pola `BASE / "data" / ...` |
-| Garis bawah merah di `airflow.operators` (VS Code) | Airflow hanya ada di Docker, bukan di Windows | Abaikan — validasi lewat UI Airflow |
+| Garis bawah merah di `airflow.operators.bash` (VS Code) | Airflow hanya ada di Docker, bukan di Windows | Abaikan — validasi lewat UI Airflow |
